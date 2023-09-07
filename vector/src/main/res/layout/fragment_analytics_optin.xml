@@ -7,7 +7,7 @@
     android:background="?android:colorBackground"
     android:paddingStart="@dimen/layout_horizontal_margin"
     android:paddingEnd="@dimen/layout_horizontal_margin"
-    android:visibility="invisible">
+    android:visibility="visible">
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flowMain"
@@ -28,17 +28,16 @@
         android:id="@+id/flowHeader"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/layout_vertical_margin"
         android:orientation="vertical"
         app:constraint_referenced_ids="logo,title,subtitle"
         app:flow_verticalGap="20dp" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:importantForAccessibility="no"
-        android:src="@drawable/element_logo_stars" />
+        android:src="@drawable/chat" />
 
     <TextView
         android:id="@+id/title"
@@ -49,7 +48,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:text="@string/analytics_opt_in_title"
+        android:text="G-Chat \n\nWelcome to G-Chat"
         android:textColor="?vctr_content_primary" />
 
     <TextView
@@ -57,18 +56,17 @@
         style="@style/Widget.Vector.TextView.Body"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:gravity="center"
         android:textColor="?vctr_content_secondary"
-        tools:text="@string/analytics_opt_in_content" />
+        android:visibility="invisible"
+        tools:text="Welcome to G-Chat" />
 
     <View
         android:id="@+id/separator"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="?vctr_content_quinary" />
+        android:background="?vctr_content_quinary"
+        android:visibility="invisible" />
 
     <!-- width of this block will be the width of the first referenced text,
      which has wrap_content, the other have 0dp -->
@@ -77,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:constraint_referenced_ids="list_item_1,list_item_2,list_item_3"
         app:flow_verticalGap="12dp" />
 
@@ -132,13 +131,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:minHeight="@dimen/layout_touch_size"
-        android:text="@string/action_enable" />
+        android:text="Chat"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/later"
         style="@style/Widget.Vector.Button.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/action_not_now" />
+        android:text="Chat"
+        android:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
